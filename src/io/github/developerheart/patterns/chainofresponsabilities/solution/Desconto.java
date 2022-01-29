@@ -2,6 +2,7 @@ package io.github.developerheart.patterns.chainofresponsabilities.solution;
 
 import io.github.developerheart.entidades.Orcamento;
 
+import java.lang.annotation.Documented;
 import java.math.BigDecimal;
 
 public abstract class Desconto {
