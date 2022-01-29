@@ -12,8 +12,12 @@ public abstract class Desconto {
         this.desconto = desconto;
     }
 
+    protected BigDecimal efetuarCalculo(Orcamento orcamento){
+        if (deveAplicar(orcamento))
+            return calcular(orcamento);
+        return desconto.efetuarCalculo(orcamento);
+    }
+    protected abstract BigDecimal calcular(Orcamento orcamento);
 
-    public abstract BigDecimal calcular(Orcamento orcamento);
-
-
+    protected abstract boolean deveAplicar(Orcamento orcamento);
 }
